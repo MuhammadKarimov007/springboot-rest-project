@@ -8,5 +8,5 @@ public interface EmployeeDao {
     List<Employee> getEmployees();
     Employee findById(int id);
     Employee save(Employee employee);
-    void deleteById(int id);
+    Employee deleteById(int id);
 }

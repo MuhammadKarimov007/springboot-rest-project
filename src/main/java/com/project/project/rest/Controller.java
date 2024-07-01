@@ -45,4 +45,8 @@ public class Controller {
 
         return employeeDao.save(employee1);
     }
+    @DeleteMapping("/employees/{employeeId}")
+    public Employee deleteEmployee(@PathVariable int employeeId) {
+        return employeeDao.deleteById(employeeId);
+    }
 }

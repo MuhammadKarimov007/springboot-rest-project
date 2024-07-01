@@ -41,7 +41,9 @@ public class EmployeeDaoImpl implements EmployeeDao {
 
     @Transactional
     @Override
-    public void deleteById(int id) {
-        entityManager.remove(entityManager.find(Employee.class, id));
+    public Employee deleteById(int id) {
+        Employee removeEmployee = entityManager.find(Employee.class, id);
+        entityManager.remove(removeEmployee);
+        return removeEmployee;
     }
 }
